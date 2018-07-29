@@ -1,11 +1,11 @@
 # SEhot
 
-AWS Hands-on Training
-======== 
+AWS SE Hands-on Training
+======
 
 Aug2018
 
-Pre-requisities:
+## Pre-requisities:
 1. Create free AWS account. This requires valid personal email, mobile number, and credit card.
    https://aws.amazon.com/resources/create-account/  
    This lab is not designed to run on the shared corporate account.
@@ -15,25 +15,29 @@ Pre-requisities:
    - Launch any T2.micro linux EC2 instance, see that it launches successfully   
      https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance
 
+
 ---
 
-Lab steps:
+
+## Lab steps:
 1. Click to subscribe to the F5 marketplace AMI we are using and then accept the terms.  
-   F5 BIG-IP Virtual Edition - Good - PAYG, 25M
+   F5 BIG-IP Virtual Edition - Good - PAYG, 25M  
+   https://aws.amazon.com/marketplace/pp/B079C44MFH?qid=1532871168475 
    ![](images/F5mktplace1.png)
 
-2. Download a local copy of the lab CFT    
-   [https://raw.githubusercontent.com/jonxly/SEhot/master/JT-fullstack-payg-1nic-bigip_jul18.template](https://raw.githubusercontent.com/jonxly/SEhot/master/JT-fullstack-payg-1nic-bigip_jul18.template)
+2. Download a local copy of the lab CFT (CloudFormation Template)  
+   https://raw.githubusercontent.com/jonxly/SEhot/master/JT-fullstack-payg-1nic-bigip_jul18.template
 
-3. Go to AWS CloudFormation and create a new template  
+3. Go to AWS CloudFormation and "create new stack"  
    Select "Upload a template to Amazon S3", and select the CFT you just downloaded
    ![](images/cft1.png)
 
-4. Fill in the parameters for the CFT  
-   Most are prepopulated here  
+4. Fill in the parameters for the CFT, then create the stack
+   Only the Stack name, AZ1, and SSH key (keypair created under pre-reqs) are required inputs  
    ![](images/cft3_input.png)
 
-5. Chill or chitchat for **8 minutes** while the template does the heavy lifting
+5. Chill or chitchat for _**8 minutes**_ while the CFT does some heavy lifting  
+   ![](images/chill.jpg)
 
 6. Check the CFT outputs  
    Specifically those highlighted below:  
@@ -66,10 +70,12 @@ Lab steps:
 14. Go into TMUI to see the app self-heal!  
     Simple yet awesome :)
 
+
 ---
 
-15. **Teardown**
-    - a. Terminate all webserver instances from the EC2 dashboard
-    - b. Go to CloudFormation and select "Delete Stack"
-    - c. check EC2 and billing dashboards before logging out
-    - d. Submit any **lab related** charges in Concur
+
+## **Teardown**
+- Terminate all webserver instances from the EC2 dashboard
+- Go to CloudFormation and select "Delete Stack"
+- Check EC2 and billing dashboards before logging out
+- Submit any **lab related** charges in Concur
