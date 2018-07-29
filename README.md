@@ -60,7 +60,7 @@ Lab steps:
     Create an Application Service based on the Service Discovery iApp with the following config  
     ![](images/sdiapp_settings.png)
 
-13. Go back to EC2 dashboard, select your webserver instance > Action > "Launch More Like This"  
+13. Go back to EC2 dashboard, select your webserver instance > "Launch More Like This"  
     Repeat to launch as many as you like (or can afford).
 
 14. Go into TMUI to see the app self-heal!  
