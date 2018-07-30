@@ -1,10 +1,7 @@
-# SEhot
-
-AWS SE Hands-on Training
-======
+# AWS SE Hands-on Training
 
 Aug2018
-
+<br>
 ## Pre-requisities:
 1. Create free AWS account. This requires valid personal email, mobile number, and credit card.
    https://aws.amazon.com/resources/create-account/  
@@ -15,14 +12,13 @@ Aug2018
    - Launch any T2.micro linux EC2 instance, see that it launches successfully   
      https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance
 
-
 ---
-
+<br>
 
 ## Lab steps:
-1. Click to subscribe to the F5 marketplace AMI we are using and then accept the terms.  
-   F5 BIG-IP Virtual Edition - Good - PAYG, 25M  
-   https://aws.amazon.com/marketplace/pp/B079C44MFH?qid=1532871168475 
+1. Go to AWS Marketplace and "Click to subscribe" to the AMI we are using, then accept the terms.  
+   [```F5 BIG-IP Virtual Edition - Good - PAYG, 25M```](https://aws.amazon.com/marketplace/pp/B079C44MFH?qid=1532871168475)  
+   F5 offers a 30D tree trial which means you do not need to pay for the F5 license, only for the underlying EC2  
    ![](images/F5mktplace1.png)
 
 2. Download a local copy of the lab CFT (CloudFormation Template)  
@@ -43,7 +39,7 @@ Aug2018
    Specifically those highlighted below:  
    ![](images/cft4_output.png)
 
-7. Access the backend website via BIG-IP. Hint: Bip1subnet1Az1SelfEipAddress  
+7. Access the backend website via BIG-IP (Hint: Bip1subnet1Az1SelfEipAddress)  
    Check your CFT events for errors or shout for help if it does not load  
    ![](images/wsvr.png) 
 
@@ -56,11 +52,11 @@ Aug2018
 10. Poke around TMUI like-a-pro, view Network Map, Pool network stats etc  
     ![](images/networkmap.png)
 
-11. Simulate a catastophic outage.  
+11. Now its time to simulate a catastophic outage.  
     Simple suggestion is to go into AWS EC2 dashboard and stop your Webserver instance  
     Confirm that the website is no longer available  
 
-12. Now Lets fix things.  
+12. Next, Lets fix things.  
     Go back to EC2 dashboard, select your webserver instance > "Launch More Like This"  
     Repeat to launch as many as you like (or can afford).  
     What do you now see in Network Map?
@@ -68,15 +64,14 @@ Aug2018
 13. Create an Application Service based on the Service Discovery iApp with the following config  
     ![](images/sdiapp_settings.png)
 
-14. Go back to Network Map to see the app self-heal!  
+14. Refresh Network Map to see the app self-heal!  
     Simple yet awesome :)
 
-
 ---
-
+<br>
 
 ## **Teardown**
 - Terminate all webserver instances from the EC2 dashboard
 - Go to CloudFormation and select "Delete Stack"
 - Check EC2 and billing dashboards before logging out
-- Submit any **lab related** charges in Concur
+- Submit any **lab related** charges via Concur
