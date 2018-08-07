@@ -6,17 +6,18 @@ Aug2018
 1. Create free AWS account. This requires valid personal email, mobile number, and credit card.
    https://aws.amazon.com/resources/create-account/  
    This lab is not designed to run on the shared corporate account.
-2. Once your account is active (should take a few minutes)
+2. Once your account is active (should take a few minutes)  
+   Do the following in the Singapore region.    
    - Create your keypair and store the PEM file locally and securely  
      http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
-   - Launch any T2.micro linux EC2 instance, see that it launches successfully   
+   - Launch any T2.micro linux EC2 instance, see that it launches successfully, and then shut it down  
      https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance
 
 ---
 <br>
 
 ## Lab steps:
-1. Go to AWS Marketplace and "Click to subscribe" to the AMI we are using, then accept the terms.  
+1. Go to AWS Marketplace and "Click to subscribe" to the AMI we are using, then accept the terms. *Do not* launch F5 from the marketplace  
    [```F5 BIG-IP Virtual Edition - Good - PAYG, 25M```](https://aws.amazon.com/marketplace/pp/B079C44MFH?qid=1532871168475)  
    F5 offers a 30D tree trial which means you do not need to pay for the F5 license, only for the underlying EC2  
    ![](images/F5mktplace1.png)
@@ -71,7 +72,11 @@ Aug2018
 <br>
 
 ## **Teardown**
-- Terminate all webserver instances from the EC2 dashboard
+- Terminate all webserver instances from the EC2 dashboard  
+  If you do not do this before the next step, deleting your CFT stack will likely fail
 - Go to CloudFormation and select "Delete Stack"
 - Check EC2 and billing dashboards before logging out
 - Submit any **lab related** charges via Concur
+
+
+## 
