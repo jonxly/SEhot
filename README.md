@@ -2,6 +2,12 @@
 
 Aug2018
 <br>
+## Brief:
+This lab deploys the latest F5 LTM and backend docker demo web servers to showcase how F5 can auto-discover pool members as the pool is scaled horizontally.  
+The complete lab takes only about 40mins.  
+
+If you are using this to demo to a customer, practice first, then use the second CFT in step3 which pre-configures the iApp to allow you to focus on showing the auto-discovery in 15mins.  
+
 ## Pre-requisities:
 1. Create free AWS account. This requires valid personal email, mobile number, and credit card.
    https://aws.amazon.com/resources/create-account/  
@@ -23,7 +29,9 @@ Aug2018
    ![](images/F5mktplace1.png)
 
 2. Download a local copy of the lab CFT (CloudFormation Template)  
-   https://raw.githubusercontent.com/jonxly/SEhot/master/JT-fullstack-payg-1nic-bigip_jul18.template
+   https://raw.githubusercontent.com/jonxly/SEhot/master/JT-fullstack-payg-1nic-bigip_jul18.template  
+   Optional: use CFT below with Service Discovery iApp config baked in (allows you to skip step 13 when demoing to customer)
+   https://raw.githubusercontent.com/jonxly/SEhot/master/JT-fullstackbaked_aug18.template
 
 3. Go to AWS CloudFormation and "create new stack"  
    Select "Upload a template to Amazon S3", and select the CFT you just downloaded
