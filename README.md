@@ -30,7 +30,7 @@ If you are using this to demo to a customer, practice first, then use the second
 
 2. Download a local copy of the lab CFT (CloudFormation Template)  
    https://raw.githubusercontent.com/jonxly/SEhot/master/JT-fullstack-payg-1nic-bigip_jul18.template  
-   Optional: use CFT below with Service Discovery iApp config baked in (allows you to skip step 13 when demoing to customer)
+   Optional: use CFT below with Service Discovery iApp config baked in (allows you to skip step 13 when demoing to customer)  
    https://raw.githubusercontent.com/jonxly/SEhot/master/JT-fullstackbaked_aug18.template
 
 3. Go to AWS CloudFormation and "create new stack"  
